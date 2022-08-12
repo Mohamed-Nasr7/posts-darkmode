@@ -15,7 +15,7 @@ code {
 
 [data-theme='dark'] {
   --background: #18191a;
-  --background-secondary: #31373c8c;
+  --background-secondary: #111315;
   --text-primary: rgb(226, 226, 226);
   --text-secondary: grey;
 }
@@ -46,4 +46,7 @@ tbody tr {
 
 .app nav .nav-link {
   color: var(--text-primary);
+}
+.app nav .nav-link.active {
+  color: var(--text-secondary);
 }
