@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
+import { Post } from './Posts';
 
 const PostComments = () => {
   const [comments, setComments] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
 
-  const post = useSelector((state: any) => state);
+  const post = useSelector((state: Post) => state);
 
   useEffect(() => {
     if (!post.id) return;
