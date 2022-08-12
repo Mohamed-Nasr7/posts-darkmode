@@ -4,7 +4,10 @@ const initialState = {
   body: '',
 };
 
-export const postReducer = (state = initialState, action: any) => {
+export const postReducer = (
+  state = initialState,
+  action: { type: string; payload: any }
+) => {
   const { type, payload } = action;
 
   switch (type) {
