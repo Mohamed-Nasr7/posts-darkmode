@@ -3,12 +3,12 @@ import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { Post } from './Posts';
 
-const PostComments = () => {
-  type Comment = {
-    body: string;
-    id: number;
-  };
+type Comment = {
+  body: string;
+  id: number;
+};
 
+const PostComments = () => {
   const [comments, setComments] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
