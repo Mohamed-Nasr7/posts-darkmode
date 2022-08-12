@@ -1,5 +1,7 @@
 import useEffect from 'react';
 
-export const Posts = () => {
+const Posts = () => {
   return <div></div>;
 };
+
+export default Posts;
