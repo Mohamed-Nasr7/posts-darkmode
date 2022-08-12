@@ -27,20 +27,20 @@ const Albums = () => {
     <div>
       {albums.map((album: any) => (
         <div className='card-group m-4'>
+          <h3>{album.title}</h3>
           <div className='row row-cols-1 row-cols-md-3 g-4'>
             {photos.map((photo: any) => {
               if (album.id == photo.albumId) {
                 return (
                   <div className='col'>
                     <div className='card'>
-                      <img src={''} className='card-img-top' alt='album' />
+                      <img
+                        src={photo.thumbnailUrl}
+                        className='card-img-top'
+                        alt='album'
+                      />
                       <div className='card-body'>
-                        <h5 className='card-title'>Card title</h5>
-                        <p className='card-text'>
-                          This is a wider card with supporting text below as a
-                          natural lead-in to additional content. This content is
-                          a little bit longer.
-                        </p>
+                        <h5 className='card-title'>{photo.title}</h5>
                       </div>
                     </div>
                   </div>
