@@ -32,7 +32,7 @@ const Albums = () => {
               <img
                 src={photo.thumbnailUrl}
                 className='card-img-top'
-                alt='album'
+                alt='thumbnail'
               />
               <div className='card-body'>
                 <h6 className='card-title'>{photo.title}</h6>
