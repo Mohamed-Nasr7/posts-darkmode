@@ -32,6 +32,10 @@ code {
   border-color: var(--text-secondary);
 }
 
+.table-hover tbody tr:hover td {
+  color: var(--text-primary);
+}
+
 tbody tr {
   cursor: pointer;
 }
