@@ -3,6 +3,10 @@ import { useSelector } from 'react-redux';
 import { Post } from './Posts';
 
 const PostComments = () => {
+  type Comment = {
+    comment: string;
+  };
+
   const [comments, setComments] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
