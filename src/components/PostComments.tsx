@@ -42,7 +42,7 @@ const PostComments = () => {
           <p className='card-text'>{post.body}</p>
         </div>
       </div>
-      <ul className='list-group list-group-flush'>
+      <ul className='list-group list-group-flush mt-4'>
         {comments.map((comment: Comment) => (
           <li className='list-group-item'>{comment.body}</li>
         ))}
