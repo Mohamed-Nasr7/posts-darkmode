@@ -4,7 +4,7 @@ import { Post } from './Posts';
 
 const PostComments = () => {
   type Comment = {
-    comment: string;
+    body: string;
   };
 
   const [comments, setComments] = useState([]);
@@ -43,7 +43,9 @@ const PostComments = () => {
         </div>
       </div>
       <ul className='list-group list-group-flush'>
-        <li className='list-group-item'>An item</li>
+        {comments.map((comment: Comment) => (
+          <li className='list-group-item'>{comment.body}</li>
+        ))}
       </ul>
     </div>
   );
