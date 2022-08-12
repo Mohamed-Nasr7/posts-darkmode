@@ -12,7 +12,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // Bootstrap Bundle JS
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 
-const store = createStore<any, any, any, any>(postReducer);
+const store = createStore(postReducer);
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
