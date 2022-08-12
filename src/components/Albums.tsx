@@ -23,30 +23,34 @@ const Albums = () => {
     getData();
   }, []);
 
+  const renderAlbumPhotos = (album: { id: number }) => {
+    return photos.map((photo: any) => {
+      if (album.id == photo.albumId) {
+        return (
+          <div className='col'>
+            <div className='card'>
+              <img
+                src={photo.thumbnailUrl}
+                className='card-img-top'
+                alt='album'
+              />
+              <div className='card-body'>
+                <h6 className='card-title'>{photo.title}</h6>
+              </div>
+            </div>
+          </div>
+        );
+      }
+    });
+  };
+
   return (
     <div>
       {albums.map((album: any) => (
         <div className='card-group m-4'>
           <h3>{album.title}</h3>
-          <div className='row row-cols-1 row-cols-md-3 g-4'>
-            {photos.map((photo: any) => {
-              if (album.id == photo.albumId) {
-                return (
-                  <div className='col'>
-                    <div className='card'>
-                      <img
-                        src={photo.thumbnailUrl}
-                        className='card-img-top'
-                        alt='album'
-                      />
-                      <div className='card-body'>
-                        <h5 className='card-title'>{photo.title}</h5>
-                      </div>
-                    </div>
-                  </div>
-                );
-              }
-            })}
+          <div className='row row-cols-1 row-cols-md-6 g-4'>
+            {renderAlbumPhotos(album)}
           </div>
         </div>
       ))}
