@@ -35,7 +35,7 @@ const PostComments = () => {
   }, [post.id]);
 
   return (
-    <div>
+    <div className='px-2'>
       <div className='card'>
         <div className='card-body'>
           <h5 className='card-title'>{post.title}</h5>
