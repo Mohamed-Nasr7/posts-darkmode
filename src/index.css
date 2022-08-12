@@ -44,9 +44,10 @@ tbody tr {
   background-color: var(--background-secondary);
 }
 
-.app nav .nav-link {
+.app[data-theme='dark'] .nav-link {
   color: var(--text-primary);
 }
-.app nav .nav-link.active {
+
+.app[data-theme='dark'] .nav-link.active {
   color: var(--text-secondary);
 }
