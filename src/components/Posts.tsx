@@ -41,12 +41,12 @@ const Posts = () => {
         </tr>
       </thead>
       <tbody>
-        {
-          <tr>
-            <td>Mark</td>
-            <td>Otto</td>
+        {posts.map((post: Post) => (
+          <tr key={post.id}>
+            <td>{post.title}</td>
+            <td>{post.body}</td>
           </tr>
-        }
+        ))}
       </tbody>
     </table>
   );
