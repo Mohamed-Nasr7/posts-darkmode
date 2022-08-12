@@ -42,11 +42,17 @@ const PostComments = () => {
           <p className='card-text'>{post.body}</p>
         </div>
       </div>
-      <ul className='list-group list-group-flush mt-4'>
-        {comments.map((comment: Comment) => (
-          <li className='list-group-item'>{comment.body}</li>
-        ))}
-      </ul>
+      {!isLoading ? (
+        <ul className='list-group list-group-flush mt-4'>
+          {comments.map((comment: Comment) => (
+            <li className='list-group-item'>{comment.body}</li>
+          ))}
+        </ul>
+      ) : (
+        <div className='w-100 text-center mt-3'>
+          <div className='spinner-border text-secondary' role='status'></div>
+        </div>
+      )}
     </div>
   );
 };

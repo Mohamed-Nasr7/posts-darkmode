@@ -43,7 +43,7 @@ const Posts = () => {
     navigate('/post');
   };
 
-  return (
+  return !isLoading ? (
     <table className='table table-hover table-bordered w-75 m-auto'>
       <thead>
         <tr>
@@ -60,6 +60,10 @@ const Posts = () => {
         ))}
       </tbody>
     </table>
+  ) : (
+    <div className='w-100 text-center'>
+      <div className='spinner-border text-secondary' role='status'></div>
+    </div>
   );
 };
 
