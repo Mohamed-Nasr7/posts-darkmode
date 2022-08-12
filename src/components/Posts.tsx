@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { setPostId, setPostTitle, setPostBody } from '../redux/actions';
+import { baseUrl } from '../constants/url';
 
 export interface Post {
   id: number;
@@ -20,9 +21,7 @@ const Posts = () => {
     const getData = async () => {
       try {
         setIsLoading(true);
-        const response = await fetch(
-          'https://jsonplaceholder.typicode.com/posts'
-        );
+        const response = await fetch(`${baseUrl}/posts`);
         if (!response.ok) throw new Error();
         const data = await response.json();
         setPosts(data);
