@@ -26,7 +26,7 @@ const App = () => {
             className='btn btn-dark'
             onClick={onToggleThemeClick}
           >
-            Dark Mode
+            {theme === 'light' ? 'Dark' : 'Light'} Mode
           </button>
         </li>
       </ul>
