@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
 import Posts from './components/Posts';
 import PostComments from './components/PostComments';
 import Albums from './components/Albums';
@@ -23,8 +23,12 @@ const App = () => {
         <ul className='navbar-nav w-100 flex-row justify-content-between p-2'>
           <li className='nav-item'>
             <ul className='navbar-nav w-100 flex-row p-2'>
-              <li className='nav-item'>Posts</li>
-              <li className='nav-item'>Albums</li>
+              <li className='nav-item'>
+                <NavLink to='/'>Posts</NavLink>
+              </li>
+              <li className='nav-item'>
+                <NavLink to='/albums'>Albums</NavLink>
+              </li>
             </ul>
           </li>
 
