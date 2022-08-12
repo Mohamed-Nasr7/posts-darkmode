@@ -6,6 +6,7 @@ import { Post } from './Posts';
 const PostComments = () => {
   type Comment = {
     body: string;
+    id: number;
   };
 
   const [comments, setComments] = useState([]);
