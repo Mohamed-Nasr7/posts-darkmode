@@ -69,13 +69,16 @@ const PostComments = () => {
         </div>
       </div>
       {!isLoading ? (
-        <ul className='list-group list-group-flush mt-4'>
-          {comments.map((comment: Comment) => (
-            <li key={comment.id} className='list-group-item'>
-              {comment.body}
-            </li>
-          ))}
-        </ul>
+        <>
+          <h5 className='mx-3 mt-4 text-center'>Comments</h5>
+          <ul className='list-group list-group-flush px-3 mt-2'>
+            {comments.map((comment: Comment) => (
+              <li key={comment.id} className='list-group-item'>
+                {comment.body}
+              </li>
+            ))}
+          </ul>
+        </>
       ) : (
         <div className='w-100 text-center mt-3'>
           <div className='spinner-border text-secondary' role='status'></div>
