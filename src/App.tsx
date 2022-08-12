@@ -20,7 +20,7 @@ const App = () => {
   return (
     <div className='app' data-theme={theme}>
       <BrowserRouter>
-        <nav className='navbar sticky-top navbar-light bg-light'>
+        <nav className='navbar sticky-top navbar-light bg-light mb-4'>
           <ul className='navbar-nav w-100 flex-row justify-content-between p-2'>
             <li className='nav-item'>
               <ul className='navbar-nav w-100 flex-row p-2'>
