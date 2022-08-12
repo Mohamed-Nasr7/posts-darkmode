@@ -20,7 +20,7 @@ const App = () => {
   return (
     <div className='app' data-theme={theme}>
       <nav className='navbar sticky-top navbar-light bg-light'>
-        <ul className='navbar-nav w-100 justify-content-end p-2'>
+        <ul className='navbar-nav w-100 flex-row justify-content-end p-2'>
           <li className='nav-item'>
             <button
               type='button'
