@@ -7,6 +7,7 @@ import { Post } from './Posts';
 type Comment = {
   body: string;
   id: number;
+  email: string;
 };
 
 const PostComments = () => {
@@ -74,7 +75,8 @@ const PostComments = () => {
           <ul className='list-group list-group-flush px-3 mt-2'>
             {comments.map((comment: Comment) => (
               <li key={comment.id} className='list-group-item'>
-                {comment.body}
+                <b>{comment.email}</b>
+                <article>{comment.body}</article>
               </li>
             ))}
           </ul>
