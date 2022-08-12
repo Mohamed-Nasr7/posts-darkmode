@@ -2,8 +2,11 @@ import { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
 const PostComments = () => {
+  const [comments, setcomments] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState('');
+
   const post = useSelector((state: any) => state);
-  console.log(post);
 
   return (
     <div>
