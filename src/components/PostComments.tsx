@@ -48,7 +48,9 @@ const PostComments = () => {
       {!isLoading ? (
         <ul className='list-group list-group-flush mt-4'>
           {comments.map((comment: Comment) => (
-            <li className='list-group-item'>{comment.body}</li>
+            <li key={comment.id} className='list-group-item'>
+              {comment.body}
+            </li>
           ))}
         </ul>
       ) : (
