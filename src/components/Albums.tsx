@@ -15,7 +15,10 @@ const Albums = () => {
         fetchMedia('albums'),
         fetchMedia('photos'),
       ]);
-      console.log(res1, res2);
+      const albums = await res1.json();
+      const photos = await res2.json();
+      setAlbums(albums);
+      setPhotos(photos);
     };
     getData();
   }, []);
