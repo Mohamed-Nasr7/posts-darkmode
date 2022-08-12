@@ -23,7 +23,23 @@ const Albums = () => {
     getData();
   }, []);
 
-  return <div></div>;
+  return (
+    <div>
+      <div className='card-group m-4'>
+        <div className='card'>
+          <img src={''} className='card-img-top' alt='album' />
+          <div className='card-body'>
+            <h5 className='card-title'>Card title</h5>
+            <p className='card-text'>
+              This is a wider card with supporting text below as a natural
+              lead-in to additional content. This content is a little bit
+              longer.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Albums;
