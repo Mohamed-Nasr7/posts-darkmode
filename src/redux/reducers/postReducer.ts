@@ -1,7 +1,7 @@
 const initialState = {
-  postId: null,
-  postTitle: '',
-  postBody: '',
+  id: null,
+  title: '',
+  body: '',
 };
 
 export const postReducer = (state = initialState, action: any) => {
@@ -9,13 +9,13 @@ export const postReducer = (state = initialState, action: any) => {
 
   switch (type) {
     case 'POST_ID':
-      return { ...state, postId: payload };
+      return { ...state, id: payload };
 
     case 'POST_TITLE':
-      return { ...state, postTitle: payload };
+      return { ...state, title: payload };
 
     case 'POST_BODY':
-      return { ...state, postBody: payload };
+      return { ...state, body: payload };
 
     default:
       return state;
