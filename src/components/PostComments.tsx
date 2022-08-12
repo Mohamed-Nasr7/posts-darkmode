@@ -59,7 +59,7 @@ const PostComments = () => {
   }, []);
 
   return (
-    <div className='px-2'>
+    <div className='px-5'>
       <div className='card'>
         <div className='card-body'>
           <h5 className='card-title'>
