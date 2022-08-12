@@ -25,10 +25,14 @@ const App = () => {
             <li className='nav-item'>
               <ul className='navbar-nav w-100 flex-row p-2'>
                 <li className='nav-item'>
-                  <NavLink to='/'>Posts</NavLink>
+                  <NavLink className='nav-link' to='/'>
+                    Posts
+                  </NavLink>
                 </li>
                 <li className='nav-item'>
-                  <NavLink to='/albums'>Albums</NavLink>
+                  <NavLink className='nav-link' to='/albums'>
+                    Albums
+                  </NavLink>
                 </li>
               </ul>
             </li>
