@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
+import { baseUrl } from '../constants/url';
 import { Post } from './Posts';
 
 type Comment = {
@@ -21,9 +22,7 @@ const PostComments = () => {
     const getData = async () => {
       try {
         setIsLoading(true);
-        const response = await fetch(
-          `https://jsonplaceholder.typicode.com/posts/${postId}/comments`
-        );
+        const response = await fetch(`${baseUrl}/posts/${postId}/comments`);
         if (!response.ok) throw new Error();
         const data = await response.json();
         setComments(data);
