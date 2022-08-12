@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
 import { Post } from './Posts';
 
 const PostComments = () => {
@@ -12,14 +13,15 @@ const PostComments = () => {
   const [error, setError] = useState('');
 
   const post = useSelector((state: Post) => state);
+  const param = useParams();
 
   useEffect(() => {
-    if (!post.id) return;
+    const postId = post.id || param.id;
     const getData = async () => {
       try {
         setIsLoading(true);
         const response = await fetch(
-          `https://jsonplaceholder.typicode.com/posts/${post.id}/comments`
+          `https://jsonplaceholder.typicode.com/posts/${postId}/comments`
         );
         if (!response.ok) throw new Error();
         const data = await response.json();
