@@ -13,6 +13,6 @@ code {
     monospace;
 }
 
-tr {
+tbody tr {
   cursor: pointer;
 }
