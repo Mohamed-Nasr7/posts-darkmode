@@ -44,10 +44,10 @@ const Posts = () => {
         </tr>
       </thead>
       <tbody>
-        {posts.map((post: Post) => (
-          <tr key={post.id}>
-            <td>{post.title}</td>
-            <td>{post.body}</td>
+        {posts.map(({ id, title, body }: Post) => (
+          <tr key={id}>
+            <td>{title}</td>
+            <td>{body}</td>
           </tr>
         ))}
       </tbody>
