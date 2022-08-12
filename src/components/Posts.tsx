@@ -35,6 +35,12 @@ const Posts = () => {
     getData();
   }, []);
 
+  const onPostClick = (id: number, title: string, body: string) => {
+    dispatch(setPostId(id));
+    dispatch(setPostTitle(title));
+    dispatch(setPostBody(body));
+  };
+
   return (
     <table className='table table-hover table-bordered w-75 m-auto'>
       <thead>
@@ -45,7 +51,7 @@ const Posts = () => {
       </thead>
       <tbody>
         {posts.map(({ id, title, body }: Post) => (
-          <tr key={id}>
+          <tr key={id} onClick={() => onPostClick(id, title, body)}>
             <td>{title}</td>
             <td>{body}</td>
           </tr>
