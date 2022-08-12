@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
+import { setPostId, setPostTitle, setPostBody } from '../redux/actions';
 
 type Post = {
   id: number;
