@@ -40,6 +40,7 @@ const Posts = () => {
     dispatch(setPostId(id));
     dispatch(setPostTitle(title));
     dispatch(setPostBody(body));
+    navigate('/post');
   };
 
   return (
