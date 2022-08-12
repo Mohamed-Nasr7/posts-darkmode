@@ -29,7 +29,7 @@ const Albums = () => {
         return (
           <div className='col'>
             <div className='card'>
-              <a href={photo.thumbnailUrl} target='_blank'>
+              <a href={photo.thumbnailUrl} target='_blank' rel='noreferrer'>
                 <img
                   src={photo.thumbnailUrl}
                   className='card-img-top'
