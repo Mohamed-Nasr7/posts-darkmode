@@ -1,9 +1,13 @@
+import { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Posts from './components/Posts';
 import PostComments from './components/PostComments';
 import Albums from './components/Albums';
 
 const App = () => {
+  const [theme, setTheme] = useState<string>(
+    localStorage.getItem('theme') || 'light'
+  );
   return (
     <div className='app'>
       <ul className='nav justify-content-end p-2'>
