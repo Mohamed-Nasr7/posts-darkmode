@@ -41,6 +41,10 @@ tbody tr {
 }
 
 .app nav.navbar-light {
+  background-color: rgb(235, 240, 245);
+}
+
+.app[data-theme='dark'] .navbar-light {
   background-color: var(--background-secondary);
 }
 
@@ -50,4 +54,8 @@ tbody tr {
 
 .app[data-theme='dark'] .nav-link.active {
   color: var(--text-secondary);
+}
+
+.app .nav-link {
+  font-weight: bold;
 }
