@@ -10,6 +10,14 @@ const Albums = () => {
     const fetchMedia = (path: string) => {
       return fetch(`${baseUrl}/${path}`);
     };
+    const getData = async () => {
+      const [res1, res2] = await Promise.all([
+        fetchMedia('albums'),
+        fetchMedia('photos'),
+      ]);
+      console.log(res1, res2);
+    };
+    getData();
   }, []);
 
   return <div></div>;
