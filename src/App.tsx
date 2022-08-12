@@ -1,4 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Posts from './components/Posts';
+import PostComments from './components/PostComments';
+import Albums from './components/Albums';
 
 const App = () => {
   return (
