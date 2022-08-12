@@ -3,11 +3,11 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { setPostId, setPostTitle, setPostBody } from '../redux/actions';
 
-type Post = {
+export interface Post {
   id: number;
   title: string;
   body: string;
-};
+}
 
 const Posts = () => {
   const [posts, setPosts] = useState([]);
