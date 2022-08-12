@@ -2,11 +2,32 @@ import { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
 const PostComments = () => {
-  const [comments, setcomments] = useState([]);
+  const [comments, setComments] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
 
   const post = useSelector((state: any) => state);
+
+  useEffect(() => {
+    if (!post.id) return;
+    const getData = async () => {
+      try {
+        setIsLoading(true);
+        const response = await fetch(
+          `https://jsonplaceholder.typicode.com/posts/${post.id}/comments`
+        );
+        if (!response.ok) throw new Error();
+        const data = await response.json();
+        setComments(data);
+        console.log(data);
+      } catch {
+        setError('An error occured!! please try again.');
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    getData();
+  }, [post.id]);
 
   return (
     <div>
