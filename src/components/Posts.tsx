@@ -16,6 +16,7 @@ const Posts = () => {
         if (!response.ok) throw new Error();
         const data = await response.json();
         setPosts(data);
+        console.log(data);
       } catch {
         setError('An error occured!! please try again.');
       } finally {
@@ -29,22 +30,17 @@ const Posts = () => {
     <table className='table table-hover table-bordered w-75 m-auto'>
       <thead>
         <tr>
-          <th scope='col'>First</th>
-          <th scope='col'>Last</th>
-          <th scope='col'>Handle</th>
+          <th scope='col'>Post title</th>
+          <th scope='col'>Post body</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
+        {
+          <tr>
+            <td>Mark</td>
+            <td>Otto</td>
+          </tr>
+        }
       </tbody>
     </table>
   );
