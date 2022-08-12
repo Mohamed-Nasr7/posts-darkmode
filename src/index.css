@@ -14,13 +14,22 @@ code {
 }
 
 [data-theme='dark'] {
-  --background: black;
-  --text-primary: white;
+  --background: #18191a;
+  --backgrounf-secondary: #242526;
+  --text-primary: rgb(226, 226, 226);
   --text-secondary: grey;
 }
 
 .app {
   min-height: 100vh;
+}
+.app,
+.app .table,
+.app .card-body,
+.app .list-group-item {
+  background-color: var(--background);
+  color: var(--text-primary);
+  border-color: var(--text-secondary);
 }
 
 tbody tr {
