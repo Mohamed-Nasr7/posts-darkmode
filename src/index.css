@@ -19,6 +19,10 @@ code {
   --text-secondary: grey;
 }
 
+.app {
+  min-height: 100vh;
+}
+
 tbody tr {
   cursor: pointer;
 }
