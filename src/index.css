@@ -15,7 +15,7 @@ code {
 
 [data-theme='dark'] {
   --background: #18191a;
-  --backgrounf-secondary: #242526;
+  --background-secondary: #31373c8c;
   --text-primary: rgb(226, 226, 226);
   --text-secondary: grey;
 }
@@ -38,4 +38,12 @@ code {
 
 tbody tr {
   cursor: pointer;
+}
+
+.app nav.navbar-light {
+  background-color: var(--background-secondary);
+}
+
+.app nav .nav-link {
+  color: var(--text-primary);
 }
