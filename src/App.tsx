@@ -8,8 +8,9 @@ const App = () => {
   const [theme, setTheme] = useState<string>(
     localStorage.getItem('theme') || 'light'
   );
+
   return (
-    <div className='app'>
+    <div className='app' data-theme={theme}>
       <ul className='nav justify-content-end p-2'>
         <li className='nav-item'>
           <button type='button' className='btn btn-dark'>
