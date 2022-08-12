@@ -37,6 +37,23 @@ const PostComments = () => {
     getData();
   }, [post.id]);
 
+  useEffect(() => {
+    if (!post.id) {
+      const getData = async () => {
+        try {
+          const response = await fetch(`${baseUrl}/posts/${param.id}`);
+          if (!response.ok) throw new Error();
+          const data = await response.json();
+          setFetchedPostOnReload(data);
+          console.log(data);
+        } catch {
+          console.log('An error occured!! please try again.');
+        }
+      };
+      getData();
+    }
+  }, []);
+
   return (
     <div className='px-2'>
       <div className='card'>
