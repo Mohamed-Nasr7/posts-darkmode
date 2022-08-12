@@ -13,7 +13,11 @@ const PostComments = () => {
   const [comments, setComments] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
-  const [fetchedPostOnReload, setFetchedPostOnReload] = useState();
+  const [fetchedPostOnReload, setFetchedPostOnReload] = useState<Post>({
+    id: 0,
+    title: '',
+    body: '',
+  });
 
   const post = useSelector((state: Post) => state);
   const param = useParams();
