@@ -29,11 +29,13 @@ const Albums = () => {
         return (
           <div className='col'>
             <div className='card'>
-              <img
-                src={photo.thumbnailUrl}
-                className='card-img-top'
-                alt='thumbnail'
-              />
+              <a href={photo.thumbnailUrl} target='_blank'>
+                <img
+                  src={photo.thumbnailUrl}
+                  className='card-img-top'
+                  alt='thumbnail'
+                />
+              </a>
               <div className='card-body'>
                 <h6 className='card-title'>{photo.title}</h6>
               </div>
