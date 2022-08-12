@@ -62,8 +62,10 @@ const PostComments = () => {
     <div className='px-2'>
       <div className='card'>
         <div className='card-body'>
-          <h5 className='card-title'>{post.title}</h5>
-          <p className='card-text'>{post.body}</p>
+          <h5 className='card-title'>
+            {post.title || fetchedPostOnReload.title}
+          </h5>
+          <p className='card-text'>{post.body || fetchedPostOnReload.body}</p>
         </div>
       </div>
       {!isLoading ? (
