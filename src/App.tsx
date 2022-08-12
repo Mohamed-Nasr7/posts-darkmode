@@ -19,17 +19,19 @@ const App = () => {
 
   return (
     <div className='app' data-theme={theme}>
-      <ul className='nav justify-content-end p-2'>
-        <li className='nav-item'>
-          <button
-            type='button'
-            className='btn btn-dark'
-            onClick={onToggleThemeClick}
-          >
-            {theme === 'light' ? 'Dark' : 'Light'} Mode
-          </button>
-        </li>
-      </ul>
+      <nav className='navbar navbar-expand-lg navbar-light bg-light'>
+        <ul className='navbar-nav w-100 justify-content-end p-2'>
+          <li className='nav-item'>
+            <button
+              type='button'
+              className='btn btn-dark'
+              onClick={onToggleThemeClick}
+            >
+              {theme === 'light' ? 'Dark' : 'Light'} Mode
+            </button>
+          </li>
+        </ul>
+      </nav>
 
       <BrowserRouter>
         <Routes>
