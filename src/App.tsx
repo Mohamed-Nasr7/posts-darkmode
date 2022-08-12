@@ -34,7 +34,7 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Posts />} />
-          <Route path='post' element={<PostComments />} />
+          <Route path='post/:id' element={<PostComments />} />
           <Route path='albums' element={<Albums />} />
         </Routes>
       </BrowserRouter>
