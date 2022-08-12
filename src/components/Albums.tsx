@@ -49,9 +49,9 @@ const Albums = () => {
   return (
     <div>
       {albums.map((album: any) => (
-        <div className='card-group m-4'>
-          <h3>{album.title}</h3>
-          <div className='row row-cols-1 row-cols-md-6 g-4'>
+        <div className='card-group m-5'>
+          <h3 className='mb-4'>Album Name: {album.title}</h3>
+          <div className='row row-cols-1 row-cols-md-6 row-cols-lg-8 g-4'>
             {renderAlbumPhotos(album)}
           </div>
         </div>
