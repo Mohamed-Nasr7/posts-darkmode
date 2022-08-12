@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Posts from './components/Posts';
 import PostComments from './components/PostComments';
@@ -8,6 +8,10 @@ const App = () => {
   const [theme, setTheme] = useState<string>(
     localStorage.getItem('theme') || 'light'
   );
+
+  useEffect(() => {
+    localStorage.setItem('theme', theme);
+  }, [theme]);
 
   const onToggleThemeClick = () => {
     setTheme(theme => (theme === 'light' ? 'dark' : 'light'));
