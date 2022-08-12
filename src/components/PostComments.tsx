@@ -42,6 +42,9 @@ const PostComments = () => {
           <p className='card-text'>{post.body}</p>
         </div>
       </div>
+      <ul className='list-group list-group-flush'>
+        <li className='list-group-item'>An item</li>
+      </ul>
     </div>
   );
 };
