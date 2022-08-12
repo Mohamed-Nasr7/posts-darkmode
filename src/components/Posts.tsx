@@ -26,7 +26,7 @@ const Posts = () => {
   }, []);
 
   return (
-    <table className='table table-hover table-bordered w-75'>
+    <table className='table table-hover table-bordered w-75 m-auto'>
       <thead>
         <tr>
           <th scope='col'>First</th>
