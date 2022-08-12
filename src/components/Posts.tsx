@@ -13,6 +13,9 @@ const Posts = () => {
   const [posts, setPosts] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
+  const [theme, setTheme] = useState<string>(
+    localStorage.getItem('theme') || 'light'
+  );
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
