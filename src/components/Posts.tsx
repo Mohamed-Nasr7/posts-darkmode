@@ -57,7 +57,12 @@ const Posts = () => {
           <th scope='col'>
             <span>Post body</span>
             <span>
-              <input className='form-check-input' type='checkbox' value='' />{' '}
+              <input
+                className='form-check-input'
+                type='checkbox'
+                value=''
+                onChange={() => setIsSorted(!isSorted)}
+              />
               Sort
             </span>
           </th>
