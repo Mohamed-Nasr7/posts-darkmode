@@ -64,7 +64,7 @@ const Posts = () => {
       <thead>
         <tr>
           <th scope='col'>Post title</th>
-          <th scope='col'>
+          <th scope='col' className='d-flex justify-content-between'>
             <span>Post body</span>
             <span>
               <input
