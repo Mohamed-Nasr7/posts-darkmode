@@ -44,9 +44,12 @@ const Posts = () => {
   };
 
   const renderPosts = () => {
-    const sorted = posts.sort((a: { title: string }, b: { title: string }) =>
-      a.title.localeCompare(b.title)
-    );
+    let sortedPosts = posts;
+    if (isSorted) {
+      sortedPosts = posts.sort((a: { title: string }, b: { title: string }) =>
+        a.title.localeCompare(b.title)
+      );
+    }
   };
 
   return !isLoading ? (
