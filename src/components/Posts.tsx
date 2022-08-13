@@ -14,6 +14,7 @@ const Posts = () => {
   const [posts, setPosts] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
+  const [isSorted, setIsSorted] = useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
