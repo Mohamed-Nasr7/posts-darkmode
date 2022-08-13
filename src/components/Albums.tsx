@@ -11,6 +11,7 @@ const Albums = () => {
       return fetch(`${baseUrl}/${path}`);
     };
     const getData = async () => {
+      setIsLoading(true);
       const [res1, res2] = await Promise.all([
         fetchMedia('albums'),
         fetchMedia('photos'),
@@ -19,6 +20,7 @@ const Albums = () => {
       const photos = await res2.json();
       setAlbums(albums);
       setPhotos(photos);
+      setIsLoading(false);
     };
     getData();
   }, []);
