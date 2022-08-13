@@ -50,6 +50,13 @@ const Posts = () => {
         a.title.localeCompare(b.title)
       );
     }
+
+    return sortedPosts.map(({ id, title, body }: Post) => (
+      <tr key={id} onClick={() => onPostClick(id, title, body)}>
+        <td>{title}</td>
+        <td>{body}</td>
+      </tr>
+    ));
   };
 
   return !isLoading ? (
