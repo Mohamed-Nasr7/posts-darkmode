@@ -46,7 +46,7 @@ const Albums = () => {
     });
   };
 
-  return (
+  return !isLoading ? (
     <div>
       {albums.map((album: any) => (
         <div className='card-group m-5'>
@@ -56,6 +56,10 @@ const Albums = () => {
           </div>
         </div>
       ))}
+    </div>
+  ) : (
+    <div className='w-100 text-center mt-3'>
+      <div className='spinner-border text-secondary' role='status'></div>
     </div>
   );
 };
