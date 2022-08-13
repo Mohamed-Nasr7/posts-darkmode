@@ -78,14 +78,7 @@ const Posts = () => {
           </th>
         </tr>
       </thead>
-      <tbody>
-        {posts.map(({ id, title, body }: Post) => (
-          <tr key={id} onClick={() => onPostClick(id, title, body)}>
-            <td>{title}</td>
-            <td>{body}</td>
-          </tr>
-        ))}
-      </tbody>
+      <tbody>{renderPosts()}</tbody>
     </table>
   ) : (
     <div className='w-100 text-center'>
