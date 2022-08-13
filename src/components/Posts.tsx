@@ -44,14 +44,15 @@ const Posts = () => {
   };
 
   const renderPosts = () => {
-    let sortedPosts = posts;
+    let clonedPosts = [...posts];
     if (isSorted) {
-      sortedPosts = posts.sort((a: { title: string }, b: { title: string }) =>
-        a.title.localeCompare(b.title)
+      clonedPosts = clonedPosts.sort(
+        (a: { title: string }, b: { title: string }) =>
+          a.title.localeCompare(b.title)
       );
     }
 
-    return sortedPosts.map(({ id, title, body }: Post) => (
+    return clonedPosts.map(({ id, title, body }: Post) => (
       <tr key={id} onClick={() => onPostClick(id, title, body)}>
         <td>{title}</td>
         <td>{body}</td>
