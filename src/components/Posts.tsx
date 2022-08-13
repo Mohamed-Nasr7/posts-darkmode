@@ -42,6 +42,12 @@ const Posts = () => {
     navigate(`/post/${id}`);
   };
 
+  const renderPosts = () => {
+    const sorted = posts.sort((a: { title: string }, b: { title: string }) =>
+      a.title.localeCompare(b.title)
+    );
+  };
+
   return !isLoading ? (
     <table className='table table-hover table-bordered w-75 m-auto'>
       <thead>
