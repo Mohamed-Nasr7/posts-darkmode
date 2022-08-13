@@ -53,7 +53,13 @@ const Posts = () => {
       <thead>
         <tr>
           <th scope='col'>Post title</th>
-          <th scope='col'>Post body</th>
+          <th scope='col'>
+            <span>Post body</span>
+            <span>
+              <input className='form-check-input' type='checkbox' value='' />{' '}
+              Sort
+            </span>
+          </th>
         </tr>
       </thead>
       <tbody>
