@@ -68,7 +68,7 @@ const Posts = () => {
             <span>Post body</span>
             <span>
               <input
-                className='form-check-input'
+                className='form-check-input mx-2'
                 type='checkbox'
                 value=''
                 onChange={() => setIsSorted(!isSorted)}
